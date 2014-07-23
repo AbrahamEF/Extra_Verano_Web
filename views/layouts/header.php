@@ -44,9 +44,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrar<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Cuidad</a></li>
-                <li><a href="#">Pais</a></li>
-                <li><a href="#">Continente</a></li>
+                <li><a href="../estado/form_estado.php">Estado</a></li>
+                <li><a href="../pais/form_pais.php">Pais</a></li>
+                <li><a href="../continente/form_continente.php">Continente</a></li>
               </ul>
             </li>
             

@@ -22,7 +22,7 @@
     <form role="form" id="registro_estado" action="" method="post"  enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  value="<?php echo $ciudadC->get_nombre(); ?>">
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
       </div>              
       <button type="submit" class="btn btn-default">Enviar</button>
     </form>
