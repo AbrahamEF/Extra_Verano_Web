@@ -10,6 +10,9 @@
 		
 
 		public function insertaEstado($datos){
+			echo"<div class='alert alert-success'>REGISTRO EXITOSO: ";
+		   
+		    echo"</div>";
 			
 			$this->set_nombre($datos['nombre']);
 			$this->set_id_pais($datos['id_pais']);
@@ -19,7 +22,8 @@
 			}
 			else{
 				$this->inserta($this->get_atributos());
-			}
+				$this->inserta=true;
+			}   
 				
 
 			

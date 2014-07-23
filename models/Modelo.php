@@ -31,6 +31,7 @@ class Modelo extends Conexion {
 
     public function inserta($rs) {
         $sql_insert = $this->db->GetInsertSQL($this->nombre_tabla, $rs);
+
         return $this->get_error($this->db->Execute($sql_insert), 'Error en Modelo.inserta');
     }
 

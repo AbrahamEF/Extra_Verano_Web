@@ -46,6 +46,7 @@ class Estado extends Modelo{
             $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
         }else{
             $this->nombre = trim($valor);
+
         }     
     }
         
