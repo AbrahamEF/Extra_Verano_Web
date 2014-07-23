@@ -1,18 +1,21 @@
 <?php
 
-class Ciudad extends Modelo{
+class Estado extends Modelo{
     public $nombre_tabla = 'estado';
     public $pk = 'id_estado';
     
     
     public $atributos = array(
         'nombre'=>array(),
+        'id_pais'=>array(),
+
                 
     );
     
     public $errores = array( );
     
     private $nombre;      
+    private $id_pais;
        
     
     function Estado(){
@@ -43,7 +46,19 @@ class Ciudad extends Modelo{
             $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
         }else{
             $this->nombre = trim($valor);
-        }                    
+        }     
+    }
+        
+     public function get_id_pais(){
+        return $this->id_pais;
+    } 
+
+    public function set_id_pais($valor){
+
+        $er = new Er();               
+        $this->id_pais = trim($valor);
+        
+                   
     
         
     }

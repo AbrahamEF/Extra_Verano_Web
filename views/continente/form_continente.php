@@ -23,7 +23,7 @@
     <form role="form" id="registro_continente" action="" method="post">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo $contienteC->get_nombre();?>">
       </div>              
       <button type="submit" class="btn btn-default">Enviar</button>
     </form>

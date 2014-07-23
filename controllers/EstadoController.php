@@ -1,22 +1,49 @@
 <?php
-	class EstadoController {
+	class EstadoController extends Estado{
 		
 		public $muestra_errores = false;
 		function __construct(){
+			parent::Estado();
 			 
 		}
 
-		public function insertaEstado($datos){
-			echo"<pre>datos";
-		    print_r($datos);
-		    echo"</pre>";
-			$estado = new Estado();
-			$estado -> set_nombre($datos['nombre']);
+		
 
-			if(count($estado->errores)>0){
-				print_r($estado->errores);
+		public function insertaEstado($datos){
+			
+			$this->set_nombre($datos['nombre']);
+			$this->set_id_pais($datos['id_pais']);
+			if (count($this->errores)>0) {
+				
+				$this->muestra_errores = true;
 			}
+			else{
+				$this->inserta($this->get_atributos());
+			}
+				
+
+			
 		}
+public function alertas()
+					{
+						
+							if($this->muestra_errores){
+							
+							echo '<div class="alert alert-danger">';
+		           
+									foreach($this->errores as $value){
+										echo "<p>$value</p>";
+									}
+								
+							echo "</div>";		                   	
+							}
+						  
+			}
+
+
+
+
+
 	}
 
 

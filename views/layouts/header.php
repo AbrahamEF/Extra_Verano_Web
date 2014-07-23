@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Continentes-Paises-Estados</title>
     
-	<link href="../css/miestilo.css" rel="stylesheet">
+  <link href="../css/miestilo.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!--BoostrapValidator-->
     <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
-	<!--Boostrap-Datetimepicker-->
+  <!--Boostrap-Datetimepicker-->
     <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/pygments-manni.css" />
     <!-- Add fancyBox -->
@@ -53,6 +53,18 @@
 
           </ul>
 
+          <ul class="nav navbar-nav navbar-right">
+          <?php if (!isset($_SESSION['user']) ){?> 
+                <li><a href="../site/login.php">
+                  <span class="glyphicon glyphicon-log-in"></span>Entrar</a>
+                </li>
+                <?php } else{ ?>
+                <li><a href="../site/logout.php">
+                  <span class="glyphicon glyphicon-log-in"></span>Salir</a>
+                </li>
+                <?php } ?>
+          </ul>
+          
 
         </div><!--/.nav-collapse -->
       </div>
@@ -62,8 +74,8 @@
     <div class="masthead">
     <!--Las tablas de mostraran al precionar cada uno de los siguentes botones correspondientemente-->     
         <ul class="nav nav-justified">
-          <li><a href="../pais/lista_paises.php">Paises</a></li>
-        </ul>
+          <li><a href="../lista/lista_paises.php">Paises</a></li>
+          </ul>
       </div>
     
 

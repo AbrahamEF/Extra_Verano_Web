@@ -22,8 +22,12 @@
     <form role="form" id="registro_estado" action="" method="post"  enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
-      </div>              
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  value="<?php echo $estadoC->get_nombre(); ?>">
+      </div>         
+      <div class="form-group">
+        <label for="id_pais">Pais:</label>
+           <?php echo $estadoC->getDropDown('pais','id_pais','id_pais');?>  
+      </div>                   
       <button type="submit" class="btn btn-default">Enviar</button>
     </form>
         	
