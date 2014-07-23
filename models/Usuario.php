@@ -1,19 +1,21 @@
 <?php
 
 class Usuario extends Modelo{
-    public $nombre_tabla = 'usuarios';
+    public $nombre_tabla = 'usuario';
     public $pk = 'id_usuario';
     
     
     public $atributos = array(
         'email'=>array(),
         'password'=>array(),
+		'rol'=>array(),
     );
     
     public $errores = array( );
     
     private $email;
     private $password;
+	private $rol;
        
     
     function Usuario(){
@@ -58,8 +60,7 @@ class Usuario extends Modelo{
     public function set_password($valor){
         $this->password = trim( md5($valor) );
     }
-    
-
+        
 
     
     
