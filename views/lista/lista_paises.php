@@ -8,7 +8,7 @@
 	  include ('../../libs/Er.php');
       include ('../layouts/header.php'); 
 	  
-	 $paisC = new PaisController();
+    $paisC = new PaisController();
  	 if(isset($_POST['nombre'])){		
 	$paisC->insertaPais($_POST,$_FILES); 
 	echo $paisC->alertas();
@@ -16,8 +16,8 @@
 ?>
 <div class="row">
 	<div  class="col-lg-4 col-lg-offset-4" align="center">
-	<?php $paisC->show_grid(); ?>
-</div>
+		<?php $paisC->show_grid(); ?>
+	</div>
 </div>
 
 <?php include ('../layouts/footer.php'); ?>

@@ -45,7 +45,7 @@ class Modelo extends Conexion {
 
     public function show_grid($select = '*', $where = ' ', $num = '10') {
         $sql = "SELECT " . $select . " 
-                FROM " . $this->nombre_tabla . " 
+                FROM " . $this->nombre_tabla . " p join continente c on p.id_continente = c.id_continente
                 " . $where;
         $grid = new ADODB_Pager($this->db, $sql);
         $grid->Render($rows_per_page = $num);
